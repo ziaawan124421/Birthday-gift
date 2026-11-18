@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 25th Birthday Fazeen 🎀</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe0ed, #f5d9ff, #fff0f5);
+    color: #9b4676;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 30px;
+    border-radius: 35px;
+    background: rgba(255,255,255,0.72);
+    border: 2px solid white;
+    box-shadow: 0 15px 60px rgba(210, 100, 160, 0.2);
+    position: relative;
+    z-index: 2;
+    animation: cardEnter 1.3s ease;
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.top-label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #d17ba9;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(55px, 12vw, 90px);
+    color: #d94f96;
+    line-height: 1.2;
+    text-shadow: 2px 3px 10px #f8c1df;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #f7a8d0; }
+    to { text-shadow: 0 0 25px #ed79b8, 0 0 40px #f8c9e4; }
+}
+
+.name {
+    font-size: clamp(28px, 7vw, 42px);
+    font-weight: 700;
+    color: #ae4c86;
+    margin: 12px 0;
+    letter-spacing: 2px;
+}
+
+.age {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(45deg, #ed9cc8, #c18ae6);
+    color: white;
+    border-radius: 30px;
+    font-size: 17px;
+    margin: 12px;
+    box-shadow: 0 5px 15px #e7b5d5;
+}
+
+.cake {
+    font-size: 100px;
+    margin: 20px 0;
+    display: inline-block;
+    animation: cakeBounce 2s infinite ease-in-out;
+}
+
+@keyframes cakeBounce {
+    0%,100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-15px) rotate(3deg); }
+}
+
+.message {
+    max-width: 490px;
+    margin: 20px auto;
+    line-height: 2;
+    font-size: 15px;
+    color: #945778;
+}
+
+.divider {
+    color: #e58ab9;
+    font-size: 23px;
+    margin: 20px;
+    letter-spacing: 10px;
+}
+
+button {
+    border: none;
+    background: linear-gradient(45deg, #e878ad, #b77ce0);
+    padding: 16px 35px;
+    border-radius: 40px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(210, 100, 170, .35);
+    transition: .3s;
+    margin: 10px;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px #e69ac8;
+}
+
+.date {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #c17da5;
+    letter-spacing: 2px;
+}
+
+.floating {
+    position: fixed;
+    bottom: -50px;
+    z-index: 1;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 10;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(900deg);
+        opacity: 0;
+    }
+}
+
+.surprise {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: #fff0f7;
+    border: 1px dashed #e58ab9;
+    border-radius: 20px;
+    animation: reveal .8s ease;
+}
+
+.surprise h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #d94f96;
+    margin-bottom: 10px;
+}
+
+.surprise p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: scale(.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #c17da5;
+}
+
+@media(max-width: 480px) {
+    .card {
+        padding: 35px 18px;
+        border-radius: 25px;
+    }
+
+    .cake {
+        font-size: 75px;
+    }
+
+    .message {
+        font-size: 13px;
+    }
+
+    button {
+        padding: 14px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="top-label">
+            ✨ A SPECIAL DAY FOR SOMEONE SPECIAL ✨
+        </div>
+
+        <h1>Happy Birthday</h1>
+
+        <div class="name">F A Z E E N 🎀</div>
+
+        <div class="age">♡ 25 Years of Magic ♡</div>
+
+        <div class="cake">🎂</div>
+
+        <div class="divider">♡ ✧ ♡</div>
+
+        <p class="message">
+            Today is all about YOU, Fazeen! 💗
+
+            <br><br>
+
+            May your 25th year be filled with endless
+            happiness, beautiful memories, lots of love
+            and countless reasons to smile.
+
+            <br><br>
+
+            May every dream you have come true,
+            may your days be as beautiful as your heart,
+            and may life always surprise you
+            with wonderful things.
+
+            <br><br>
+
+            Keep shining, keep smiling and
+            never stop being the amazing person you are! 🌷
+        </p>
+
+        <div class="divider">🌸 💕 🌸</div>
+
+        <button onclick="celebrate()">
+            🎉 Let's Celebrate!
+        </button>
+
+        <button onclick="showSurprise()">
+            🎁 Open Your Surprise
+        </button>
+
+        <div class="surprise" id="surprise">
+            <h2>Dear Fazeen 💌</h2>
+
+            <p>
+                Happy 25th Birthday! 🥹💗
+
+                <br><br>
+
+                You deserve all the happiness this world
+                has to offer. I hope this new chapter
+                brings you success, peace, laughter
+                and unforgettable adventures.
+
+                <br><br>
+
+                Never forget how special you are.
+                Today, tomorrow and always.
+
+                <br><br>
+
+                Lots of love & best wishes! 🎀🌷
+            </p>
+
+            <div style="font-size:35px; margin-top:15px;">
+                💗 🦋 🌸
+            </div>
+        </div>
+
+        <div class="date">
+            📅 23 NOVEMBER · YOUR SPECIAL DAY
+        </div>
+
+        <footer>
+            Made with ♡ just for Fazeen
+        </footer>
+
+    </div>
+
+</div>
+
+<script>
+
+// Floating hearts and flowers
+const decorations = ["💗","💕","🌸","✨","🎀","🦋","🌷"];
+
+function createFloating() {
+    const item = document.createElement("div");
+
+    item.className = "floating";
+    item.innerHTML =
+        decorations[Math.floor(Math.random() * decorations.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.fontSize = (Math.random() * 20 + 15) + "px";
+    item.style.animationDuration = (Math.random() * 5 + 5) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 10000);
+}
+
+setInterval(createFloating, 450);
+
+
+// Confetti
+const colors = [
+    "#ff69b4",
+    "#ffc0cb",
+    "#dda0dd",
+    "#ffd700",
+    "#ffffff",
+    "#da70d6"
+];
+
+function createConfetti() {
+    const piece = document.createElement("div");
+
+    piece.className = "confetti";
+
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.width = (Math.random() * 9 + 5) + "px";
+    piece.style.height = (Math.random() * 12 + 6) + "px";
+    piece.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+    piece.style.borderRadius = Math.random() > .5 ? "50%" : "2px";
+    piece.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+    document.body.appendChild(piece);
+
+    setTimeout(() => piece.remove(), 5000);
+}
+
+function celebrate() {
+    for(let i = 0; i < 180; i++) {
+        setTimeout(createConfetti, i * 8);
+    }
+}
+
+function showSurprise() {
+    const box = document.getElementById("surprise");
+
+    box.style.display = "block";
+
+    celebrate();
+
+    box.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+// Gentle confetti on page opening
+for(let i = 0; i < 35; i++) {
+    setTimeout(createConfetti, i * 100);
+}
+
+</script>
+
+</body>
+</html>
